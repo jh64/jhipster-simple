@@ -66,13 +66,6 @@ spec:
                   key: postgresql-password
             - name: JAVA_OPTS
               value: ' -Xmx256m -Xms256m'
-          resources:
-            requests:
-              memory: '512Mi'
-              cpu: '500m'
-            limits:
-              memory: '1Gi'
-              cpu: '1'
           ports:
             - name: http
               containerPort: 8080
