@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jhipstersimple
-  namespace: default
+  namespace: jd-n2
 spec:
   replicas: 1
   selector:
@@ -56,7 +56,7 @@ spec:
                   name: jwt-secret
                   key: secret
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:postgresql://jhipstersimple-postgresql.default.svc.cluster.local:5432/jhipstersimple
+              value: jdbc:postgresql://jhipstersimple-postgresql.jd-n2.svc.cluster.local:5432/jhipstersimple
             - name: SPRING_DATASOURCE_USERNAME
               value: jhipstersimple
             - name: SPRING_DATASOURCE_PASSWORD

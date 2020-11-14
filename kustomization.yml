@@ -1,7 +1,10 @@
 commonLabels:
   app.kubernetes.io/genereted-by: JHipster
 
+namespace: jd-n2
+
 resources:
+  - namespace.yml
   # Individual apps
   - jhipstersimple-k8s/jhipstersimple-deployment.yml
   - jhipstersimple-k8s/jhipstersimple-service.yml
