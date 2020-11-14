@@ -38,13 +38,16 @@
     "blueprints": [],
     "appsFolders": ["jhipster-simple"],
     "directoryPath": "../",
-    "dockerRepositoryName": "u20041-kworker3-dev:5000",
+    "dockerRepositoryName": "jhuang64",
     "dockerPushCommand": "docker push",
     "kubernetesNamespace": "jd-n2",
     "kubernetesServiceType": "LoadBalancer",
     "kubernetesUseDynamicStorage": false,
     "ingressDomain": "",
     "monitoring": "no",
-    "istio": false
+    "istio": false,
+    "openshiftNamespace": "jd-p1",
+    "storageType": "ephemeral",
+    "registryReplicas": 2
   }
 }
