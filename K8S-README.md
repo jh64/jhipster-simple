@@ -34,7 +34,7 @@ skaffold run [or] skaffold deploy
 Use these commands to find your application's IP addresses:
 
 ```
-$ kubectl get svc jhipstersimple -n jd-n2
+$ kubectl get svc jhipstersimple -n jd-ingress
 ```
 
 ## Scaling your deployments
@@ -42,7 +42,7 @@ $ kubectl get svc jhipstersimple -n jd-n2
 You can scale your apps using
 
 ```
-$ kubectl scale deployment <app-name> --replicas <replica-count> -n jd-n2
+$ kubectl scale deployment <app-name> --replicas <replica-count> -n jd-ingress
 ```
 
 ## zero-downtime deployments
@@ -50,7 +50,7 @@ $ kubectl scale deployment <app-name> --replicas <replica-count> -n jd-n2
 The default way to update a running app in kubernetes, is to deploy a new image tag to your docker registry and then deploy it using
 
 ```
-$ kubectl set image deployment/<app-name>-app <app-name>=<new-image>  -n jd-n2
+$ kubectl set image deployment/<app-name>-app <app-name>=<new-image>  -n jd-ingress
 ```
 
 Using livenessProbes and readinessProbe allow you to tell Kubernetes about the state of your applications, in order to ensure availablity of your services. You will need minimum 2 replicas for every application deployment if you want to have zero-downtime deployed.

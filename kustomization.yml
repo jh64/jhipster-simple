@@ -1,7 +1,7 @@
 commonLabels:
   app.kubernetes.io/genereted-by: JHipster
 
-namespace: jd-n2
+namespace: jd-ingress
 
 resources:
   - namespace.yml
@@ -9,6 +9,7 @@ resources:
   - jhipstersimple-k8s/jhipstersimple-deployment.yml
   - jhipstersimple-k8s/jhipstersimple-service.yml
   - jhipstersimple-k8s/jhipstersimple-postgresql.yml
+  - jhipstersimple-k8s/jhipstersimple-ingress.yml
   - jhipstersimple-k8s/jwt-secret.yml
 # service discovery eureka/consul
 

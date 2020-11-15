@@ -2,18 +2,18 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: jhipstersimple-postgresql
-  namespace: jd-n2
+  namespace: jd-ingress
   labels:
     app: jhipstersimple-postgresql
 type: Opaque
 data:
-  postgresql-password: MzUzN2E3MjY5MmU1YjJjZjA1OGE3ZDJkZDk0ODFhZDkyOWVjMmQxMTAxMGY5ZjJmYWZlOGFlYWM3ZjM0
+  postgresql-password: MmVhMTIxNmI5ZDE4MmZjOGE1ZDFkMjlmODU4ZTVhOWUwMGI2NmJiNWI5NDJiYzhhMzgyNDZkMGEyOWIx
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jhipstersimple-postgresql
-  namespace: jd-n2
+  namespace: jd-ingress
 spec:
   replicas: 1
   selector:
@@ -49,7 +49,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: jhipstersimple-postgresql
-  namespace: jd-n2
+  namespace: jd-ingress
 spec:
   selector:
     app: jhipstersimple-postgresql

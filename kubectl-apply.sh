@@ -20,6 +20,10 @@ exit 0
 
 logSummary() {
     echo ""
+        echo "#####################################################"
+        echo "Please find the below useful endpoints,"
+        echo "jhipstersimple - http://jhipstersimple.jd-ingress.192.168.99.100.nip.io"
+        echo "#####################################################"
 }
 
 default() {

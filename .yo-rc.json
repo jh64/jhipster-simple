@@ -40,11 +40,12 @@
     "directoryPath": "../",
     "dockerRepositoryName": "u20041-kworker3-dev:5000",
     "dockerPushCommand": "docker push",
-    "kubernetesNamespace": "jd-n2",
-    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesNamespace": "jd-ingress",
+    "kubernetesServiceType": "Ingress",
     "kubernetesUseDynamicStorage": false,
-    "ingressDomain": "",
+    "ingressDomain": "192.168.99.100.nip.io",
     "monitoring": "no",
-    "istio": false
+    "istio": false,
+    "ingressType": "nginx"
   }
 }
