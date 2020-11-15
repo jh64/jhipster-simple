@@ -64,7 +64,7 @@ objects:
         spec:
           containers:
             - name: ${APPLICATION_NAME}
-              image: jhuang64/jhipstersimple
+              image: u20041-kworker3-dev:5000/jhipstersimple
               imagePullPolicy: IfNotPresent
               env:
                 - name: SPRING_PROFILES_ACTIVE

@@ -38,7 +38,7 @@
     "blueprints": [],
     "appsFolders": ["jhipster-simple"],
     "directoryPath": "../",
-    "dockerRepositoryName": "jhuang64",
+    "dockerRepositoryName": "u20041-kworker3-dev:5000",
     "dockerPushCommand": "docker push",
     "kubernetesNamespace": "jd-n2",
     "kubernetesServiceType": "LoadBalancer",
