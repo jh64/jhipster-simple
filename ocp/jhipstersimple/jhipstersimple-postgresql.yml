@@ -147,13 +147,9 @@ objects:
         app: ${APPLICATION_NAME}
     spec:
       ports:
-        - name: postgresqldb-bc
-          protocol: TCP
-          port: 5432
-          targetPort: 5432
         - name: postgresqldb
           protocol: TCP
-          port: 80
+          port: 5432
           targetPort: 5432
       selector:
         app: ${APPLICATION_NAME}
