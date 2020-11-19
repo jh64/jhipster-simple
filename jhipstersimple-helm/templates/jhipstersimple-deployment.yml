@@ -47,6 +47,7 @@ spec:
       containers:
         - name: jhipstersimple-app
           image: u20041-kworker3-dev:5000/jhipstersimple
+          imagePullPolicy: IfNotPresent
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod
