@@ -40,7 +40,7 @@
     "directoryPath": "../",
     "dockerRepositoryName": "u20041-kworker3-dev:5000",
     "dockerPushCommand": "docker push",
-    "kubernetesNamespace": "jd-n2",
+    "kubernetesNamespace": "jd-helm",
     "kubernetesServiceType": "LoadBalancer",
     "kubernetesUseDynamicStorage": false,
     "ingressDomain": "",
