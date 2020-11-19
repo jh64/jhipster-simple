@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: jd-helm-ingress
+  name: jd-n2
