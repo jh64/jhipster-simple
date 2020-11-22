@@ -21,6 +21,9 @@ public class LoggingConfiguration {
 
     public LoggingConfiguration(@Value("${spring.application.name}") String appName,
                                 @Value("${server.port}") String serverPort,
+                                @Value("${spring.datasource.url}") String springDatasourceUrl,
+                                @Value("${spring.datasource.username}") String springDatasourceUsername,
+                                @Value("${spring.datasource.password}") String springDatasourcePassword,
                                 JHipsterProperties jHipsterProperties,
                                 ObjectMapper mapper) throws JsonProcessingException {
 
@@ -29,6 +32,13 @@ public class LoggingConfiguration {
         Map<String, String> map = new HashMap<>();
         map.put("app_name", appName);
         map.put("app_port", serverPort);
+        
+        //TODO: jd - please remove experimental code - for testing k8s settings of ConfigMap and Secret
+        map.put("app_datasource_url", springDatasourceUrl);
+        map.put("app_datasource_username", springDatasourceUsername);
+        map.put("app_datasource_password", springDatasourcePassword);
+        System.out.println("map: " + map);
+        
         String customFields = mapper.writeValueAsString(map);
 
         JHipsterProperties.Logging loggingProperties = jHipsterProperties.getLogging();
