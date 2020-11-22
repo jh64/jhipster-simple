@@ -1,23 +1,26 @@
 package com.mycompany.myapp.config;
 
-import ch.qos.logback.classic.LoggerContext;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.jhipster.config.JHipsterProperties;
+import static io.github.jhipster.config.logging.LoggingUtils.addContextListener;
+import static io.github.jhipster.config.logging.LoggingUtils.addJsonConsoleAppender;
+import static io.github.jhipster.config.logging.LoggingUtils.addLogstashTcpSocketAppender;
+import static io.github.jhipster.config.logging.LoggingUtils.setMetricsMarkerLogbackFilter;
+import java.util.HashMap;
+import java.util.Map;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static io.github.jhipster.config.logging.LoggingUtils.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import ch.qos.logback.classic.LoggerContext;
+import io.github.jhipster.config.JHipsterProperties;
 
 /*
  * Configures the console and Logstash log appenders from the app properties
  */
 @Configuration
 public class LoggingConfiguration {
+    private static final Logger log = LoggerFactory.getLogger(LoggingConfiguration.class);
 
     public LoggingConfiguration(@Value("${spring.application.name}") String appName,
                                 @Value("${server.port}") String serverPort,
@@ -37,6 +40,7 @@ public class LoggingConfiguration {
         map.put("app_datasource_url", springDatasourceUrl);
         map.put("app_datasource_username", springDatasourceUsername);
         map.put("app_datasource_password", springDatasourcePassword);
+//      log.info("map: " + map);
         System.out.println("map: " + map);
         
         String customFields = mapper.writeValueAsString(map);
