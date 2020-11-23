@@ -29,7 +29,8 @@ logSummary() {
 default() {
     suffix=k8s
     kubectl apply -f namespace.yml
-    kubectl apply -f jhipstersimple-${suffix}/
+#   kubectl apply -f jhipstersimple-${suffix}/
+    kubectl apply -f ./
 
 }
 
